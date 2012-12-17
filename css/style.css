@@ -1,0 +1,128 @@
+/*
+Apprenticeship in User Experience Program
+Pre-Work Assignments
+
+                         __
+      o                 /' ) 
+                      /'   (                          ,
+                  __/'     )                        .' `;
+   o      _.-~~~~'          ``---..__             .'   ;
+     _.--'  b)                       ``--...____.'   .'
+    (     _.      )).      `-._                     <
+     `\|\|\|\|)-.....___.-     `-.         __...--'-.'.
+       `---......_______,,,`.___.'----... .'         `.;
+                                         `-`           ` 
+
+Mel Choyce
+http://melchoyce.github.com/AUX-Sprints/
+http://choycedesign.com
+
+*/
+
+
+/* =CSS Reset
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* =Global Elements
+-------------------------------------------------------------- */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background: url('../img/bg.png') repeat;
+	font-family: "dejarip", sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	color: #333;
+}
+
+h1 {
+	padding-bottom: .5em;
+	text-align: center;
+	font-family: "adelle", georgia, serif;
+	font-size: 36px;
+	font-size: 3.6rem;
+	line-height: 1.4;
+	font-weight: 100;
+	border-bottom: 1px dashed #dfdfdf;
+}
+
+p {
+	margin: 1.5em 0 1em;	
+}
+
+input[type='text'] {
+	border: 1px solid #ccc;
+	padding: 1em;
+}
+
+/* =Layout
+-------------------------------------------------------------- */
+
+#container {
+	margin: 5em auto;
+	padding: 2em;
+	max-width: 600px;
+	background-color: white;
+	border: 1px solid #dfdfdf;
+	box-shadow: 0 0 5px rgba(0,0,0,.05);
+}
+
+#search-field, 
+#search-results {
+	margin-top: 2em;
+}
+
+input[type='text'] {
+	width: 96%;
+}
