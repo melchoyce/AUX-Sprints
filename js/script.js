@@ -37,27 +37,49 @@ var addressBook = [
 	}
 ];
 
-/* cache some initial variables */
-var object = addressBook, // save the data object
-	contactsCount = object.length, // counts the number of objects in your address book
-	target = document.getElementById("search-results"), // where you're outputting the data
-	i; // declare the "i" variable for later using in the loop
+(function () {
+	/* cache some initial variables */
+	var searchForm = document.getElementById("search-form"),
+		searchField = document.getElementsByTagName("input")[0],
+		count = addressBook.length,
+		target = document.getElementById("search-results");
+		
+	/* define address book method */
+	var book = {
 	
-/* before doing anything make sure there are contacts to loop through */
-if (contactsCount > 0) {
-
-	/* loop through each JSON object item until you hit the last contact, then stop */
-	for (i = 0; i < contactsCount; i = i+1) {
-		
-		/* inside the loop "i" is the array index */
-		var item = object[i],
-			name = item.name,
-			email = item.email;
+		search : function(event) {
+			// save the input value, contacts length and i to variables
+			var searchValue = searchField.value,
+				i;
+				
+			// stop the default behavior
+			event.preventDefault();
 			
-		/* insert each person's name & mailto link into the HTML */
-		target.innerHTML += '<a href="mailto:' + email + '"><div class="contact">' + name + '<div class="contact-email"></div></div></a>';
-		
-	} // end for loop
+			// clear the target area just in case there's something in it
+			target.innerHTML = "";
+			
+			// check the count
+			if (count > 0 && searchValue !== "") {
+				
+				// loop through the contacts
+				for(i=0; i < count; i = i+1) {
+					
+					var obj = addressBook[i],
+						isItFound = obj.name.toLowerCase().indexOf(searchValue);
 
-}
+					if(isItFound !== -1) {
+						target.innerHTML += '<a href="mailto:' + obj.email + '"><div class="contact">' + obj.name + '<div class="contact-email"></div></div></a>';
+					} // end if
 
+				} // end for loop
+			
+			} // end if count
+			
+		} // end search
+
+	} // end book
+	
+	/* activate the event listeners */
+	searchField.addEventListener("keyup", book.search, false);
+	
+})();
