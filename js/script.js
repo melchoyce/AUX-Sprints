@@ -78,7 +78,7 @@ function ajaxCall(dataURL, outputElement, callback) {
 			ajaxCall("data/contacts.json", target, function(data) {
 		
 				// save the input value, contacts length and i to variables
-				var searchValue = searchField.value,
+				var searchValue = searchField.value.toLowerCase(),
 					addrBook = data.addressBook,
 					count = addrBook.length,
 					i;
