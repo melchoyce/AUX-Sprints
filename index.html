@@ -21,10 +21,10 @@
 		<header>
 			<h1>My Address Book</h1>
 		</header>
-		<section id="search-field">
+		<section id="search">
 			<p>Search for contacts within your address book by typing in the field below:</p>
 			<form action="" method="get" id="search-form">
-				<input type="text" name="search" role="search" placeholder="Type the name of your contact here" autofocus>
+				<input id="search-field" type="text" name="search" role="search" placeholder="Type the name of your contact here" autofocus>
 			</form>
 		</section>
 		<section id="search-results" aria-atomic="true" aria-live="polite" aria-relevant="aditions removals">
@@ -32,6 +32,7 @@
 	</div> <!-- End #container -->
 
 	<!-- JS -->
+	<script src="js/jquery.js" type="text/javascript"></script>
 	<script src="js/script.js" type="text/javascript"></script>
 	<script type="text/javascript" src="//use.typekit.net/zjk3yos.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
