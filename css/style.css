@@ -126,6 +126,13 @@ input[type='text'] {
 input[type='text'] {
 	width: 96%;
 }
+input[type="text"]:focus {
+    outline: none;
+    border: 1px solid #B3ABBA;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 0 0 5px rgba(0,0,0,.3);
+	box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
 
 /* =Contacts
 -------------------------------------------------------------- */
