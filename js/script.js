@@ -3,9 +3,6 @@
 
 // Wrapping in an anonymous function
 (function () {
-
-	/* cache some initial variables */
-	var searchField = document.getElementsByTagName("input")[0];
 	
 	var book = {
 	
@@ -51,6 +48,8 @@
 	} // end book	
 	
 	/* activate the event listeners */
-    searchField.addEventListener("keyup", book.search, false);
+	$('#search-field').keyup(function(event) {
+		book.search(event);
+	});
 
 })(); // end anonymous function
